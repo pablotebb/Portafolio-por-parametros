@@ -86,29 +86,23 @@
 
         }
     </style>
+
+    <!-- Menu hamburguesa -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("hamburger_o_cross-btn");
+            const menu = document.getElementById("menu_thrower");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("is-active");
+            });
+        });
+    </script>
+
+
+    
 </head>
 <body>
-
-<header id="header">
-  <div class="container">
-    <div class="logo">
-      <a href="#">Mi Sitio</a>
-    </div>
-    <button id="hamburger_o_cross-btn" aria-label="Abrir menú">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="30" height="30">
-        <rect width="100" height="15" fill="white" />
-        <rect y="30" width="100" height="15" fill="white" />
-        <rect y="60" width="100" height="15" fill="white" />
-      </svg>
-    </button>
-    <nav id="menu_thrower">
-      <a href="#home">Inicio</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </div>
-</header>
-
     <!-- CABECERA -->
     <header id="header">
         <section class="container">
@@ -117,12 +111,15 @@
                    <img src="{% static 'core/img/logo.webp' %}" alt="Logo" width="40">
                 </a>
             </div>
-            <button id="hamburger_o_cross-btn">
-                <!-- Hamburger -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
-                <!-- Cross -->
-                <svg class="not_visualize" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/></svg>
+            <button id="hamburger_o_cross-btn" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="30" height="30">
+                    <rect width="100" height="15" fill="white" />
+                    <rect y="30" width="100" height="15" fill="white" />
+                    <rect y="60" width="100" height="15" fill="white" />
+                </svg>
             </button>
+
+
             <nav id="menu_thrower">
                 <a href="#home">Inicio</a>
                 <a href="#portfolio">Portafolio</a>
@@ -194,7 +191,7 @@
             </article>
             <article>
                 <div id="name_and_data">   
-                    <h2>Pepito Diaz</h2>
+                    <h2>Pablo Belda Bilbao</h2>
                     <h3>Programador front-end 
                         y back-end</h3>
                 </div>
@@ -221,7 +218,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/></svg>
             </a>
             <article class="philosophy-modal">
-                <img id="picture" src="assets/paint.svg" alt="dibujo de acuarela">
+                
+                <img id="picture" src="{% static 'core/img/paint.svg' %}" alt="dibujo de acuarela">
                 <div class="philosophy-info">
                     <h3>MI PIEDRA FILOSOFAL</h3>
                     <p>
@@ -2012,18 +2010,9 @@
     <!-- Own script -->
     <script src="{% static 'core/js/script.js' %}"></script>
     <script src="{% static 'core/js/form.js' %}"></script>
+
+   
+
   
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("hamburger_o_cross-btn");
-    const menu = document.getElementById("menu_thrower");
-
-    btn?.addEventListener("click", () => {
-      menu.classList.toggle("is-active");
-    });
-  });
-</script>
-
 </body>
 </html>
