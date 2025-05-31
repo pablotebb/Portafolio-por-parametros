@@ -180,41 +180,11 @@
             </aside>
         </article>
     </section>
-    <section id="home" class="home section">
-        <div id="presentation">
-            <article  class="questions_about_me">
-                <div class="travel">
-                    <!-- Tour question and link to next  -->
-                    <h5 style="color: white">¿Quién soy?</h5>
-                    <br>
-                    <h5 style="color: white">Siguiente <a href="#portfolio" id="here">aquí</a></h5>
-                    <!-- up arrow FONT AWESOME -->
-                    <i class="fas fa-arrow-circle-down fa-5x arrow" style="color:Dodgerblue;"></i>
-                </div>
-            </article>
-            <article>
-                <div id="name_and_data">   
-                    <h2>Pepito Diaz</h2>
-                    <h3>Programador front-end 
-                        y back-end</h3>
-                </div>
-            </article>
-            <article id="container_photo">
-                <div class="container">
-                    <a href="#my_photo">
-                        <p class="picture_me"></p>
-                    </a>
-                </div> 
-            </article>
-            <article>
-                <div class="phrase">
-                    <h4>
-                        “No esperes la oportunidad, ten la suerte de crearla“.
-                    </h4>
-                </div>
-            </article>
-        </div>
-    </section>
+
+    {% block cabecera %}
+        {% include 'cabecera/cabecera.html' %}
+    {% endblock %}
+   
     <article class="modal" id="my_photo">
         <div class="modal-content">
             <a href="#close" class="modal-close">
