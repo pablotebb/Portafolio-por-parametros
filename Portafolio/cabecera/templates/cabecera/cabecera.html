@@ -1,6 +1,6 @@
 
 
-{% block cabecera %}
+
   
 
     <section id="home" class="home section">
@@ -17,26 +17,29 @@
                 </article>
                 <article>
                     <div id="name_and_data">   
-                        <h2>Pepito Diaz</h2>
-                        <h3>Programador front-end 
-                            y back-end</h3>
+                        <h2>{{ datos.nombre }}</h2>
+                        <h3>{{ datos.profesion }}</h3>
                     </div>
                 </article>
-                <article id="container_photo">
-                    <div class="container">
-                        <a href="#my_photo">
-                            <p class="picture_me"></p>
-                        </a>
-                    </div> 
-                </article>
+               {% if datos.foto and datos.foto.url %}
+                    <article id="container_photo">
+                        <div class="container">
+                            <a href="#my_photo">
+                                <p class="picture_me">
+                                
+                                    <img src="{{ datos.foto.url }}" alt="">
+                                </p>
+                            </a>
+                        </div> 
+                    </article>
+                {% endif %}
                 <article>
                     <div class="phrase">
                         <h4>
-                            “No esperes la oportunidad, ten la suerte de crearla“.
+                            "{{ datos.frase }}"
                         </h4>
                     </div>
                 </article>
             </div>
     </section>
 
-{% endblock %}

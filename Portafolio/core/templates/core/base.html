@@ -1,6 +1,8 @@
 
 {% load static %}
 
+{% load cabecera_tags %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,7 +23,9 @@
     <style>
 
         #container_photo .picture_me {
+            {% comment %}             
             background-image: url("{% static 'core/img/photo_pablo_mobile.svg' %}");
+            {% endcomment %}
             background-size: cover;
             filter: grayscale(1);
             height: 6rem;
@@ -33,7 +37,9 @@
 
         #container_photo .picture_me:hover {
             /* Figma */
-            background-image: url("{% static 'core/img/horseshoe_mobile.svg' %}");
+            {% comment %} 
+            background-image: url("{% static 'core/img/horseshoe_mobile.svg' %}"); {% endcomment %}
+            
             background-size: cover;
             cursor: pointer;
             height: 6rem;
@@ -47,7 +53,7 @@
 
             #container_photo .picture_me {
                 /* Figma */
-                background-image: url("{% static 'core/img/photo_pablo_tablet.svg' %}");
+                {% comment %} background-image: url("{% static 'core/img/photo_pablo_tablet.svg' %}"); {% endcomment %}
                 height: 8.5rem;
                 left: 19.813rem;
                 margin-top: 11rem;
@@ -58,7 +64,9 @@
 
             #container_photo .picture_me:hover {
                 /* Figma */
-                background-image: url("{% static 'core/img/horseshoe_tablet.svg' %}");
+
+                {% comment %} background-image: url("{% static 'core/img/horseshoe_tablet.svg' %}");
+                 {% endcomment %}
                 background-repeat: no-repeat;
                 background-size: contain;
                 cursor: pointer;
@@ -75,7 +83,9 @@
 
             #container_photo .picture_me {
                 /* Figma */
-                background-image: url("{% static 'core/img/photo_pablo_desktop.svg' %}");
+                
+                {% comment %} background-image: url("{% static 'core/img/photo_pablo_desktop.svg' %}");
+                 {% endcomment %}
                 height: 9rem;
                 left: 35.125rem;
                 margin-top: 2rem;
@@ -181,9 +191,8 @@
         </article>
     </section>
 
-    {% block cabecera %}
-        {% include 'cabecera/cabecera.html' %}
-    {% endblock %}
+    {% render_cabecera %}
+       
    
     <article class="modal" id="my_photo">
         <div class="modal-content">
