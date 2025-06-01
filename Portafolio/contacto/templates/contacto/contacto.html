@@ -1,0 +1,67 @@
+ <section id="contact" class="section_2">
+        <h2 class="title">Comunícate!!</h2>
+
+        <div class="container-contact">
+            {% for dato in datos %}
+                <div class="social-media">
+                    <img src="{{ dato.foto.url }}" alt="red social">
+                </div>
+            {% endfor %}
+        </div>
+        
+        <main>
+            <!-- FORM -->
+            <form action="" class="form" id="form">
+              
+                <!-- Group: Name --> 
+                <div class="form-group" id="group__name">
+                    <label for="name" class="form-label">Nombre</label>
+                    <div class="form-group-input">
+                        <input type="text" class="form-input" name="name" id="name" placeholder="John Doe">
+                        <i class="form-validation-status fas fa-times-circle"></i>
+                    </div>
+                    <!-- To display input error-->
+                    <p class="form-input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+                </div>
+    
+                <!-- Group: Email -->
+                <div class="form-group" id="group__mail">
+                    <label for="mail" class="form-label">Correo Electrónico</label>
+                    <div class="form-group-input">
+                        <input type="email" class="form-input" name="mail" id="mail" placeholder="correo@correo.com" >
+                        <i class="form-validation-status fas fa-times-circle"></i>
+                    </div>
+                    <!-- To display input error -->
+                    <p class="form-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+
+                <!-- Group: Comments -->
+                <div class="form-group" id="group__textArea">
+                    <label for="textoarea" class="form-label">Comentarios</label>
+                    <div class="form-group-input">
+                        <textarea class="form-textarea"
+                        id="textoarea" name="textArea" cols="50" rows="2" placeholder="Dejame tus comentarios *" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Image Loader -->
+                <div class="contact-form-loader text-center none">
+                    <img src="assets/loader.svg" alt="Enviando...">
+                </div>
+    
+                <!-- To display form sending error -->
+                <div class="form-message" id="form-message">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el form correctamente. </p>
+                </div>
+    
+                <!-- Group: Buttom submit -->
+                <div class="form-group form-group-btn-send">
+                    <button type="submit" class="form-btn">Enviar</button>
+                </div>
+            </form>
+            <!-- END FORM -->
+
+           
+            
+        </main>
+    </section>
