@@ -1,0 +1,15 @@
+
+
+<section id="skills" class="section">
+        <div class="container">
+            <h2 class="title">Habilidades</h2>
+            <div id="skills_column">
+                {% for dato in datos %}
+                    <div class="skill_language">
+                        <img src="{{ dato.foto.url }}" alt="ícono Html 5">
+                        <h2>{{ dato.leyenda }}</h2>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
