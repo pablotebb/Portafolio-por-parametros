@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'cabecera',
     'habilidades',
+    'aficiones',
 ]
 
 MIDDLEWARE = [
