@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cabecera',
     'habilidades',
     'aficiones',
+    'autodidacta',
 ]
 
 MIDDLEWARE = [
