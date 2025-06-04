@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'aficiones',
     'autodidacta',
     'contacto',
+    'porfolio',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,62 @@
+
+       
+       
+       <div class="container">
+            <h2 class="title">Trabajos</h2>
+            {% for dato in datos %}
+                <div class="job-card">
+                    <figure>
+                        {% if dato.imagen %}
+                            <img src="{{ dato.imagen.url }}" alt="Imagen del proyecto">
+                        {% else %}
+                            <p>No hay imagen disponible</p>
+                        {% endif %}
+                        <figcaption>
+                            <a href="{{ dato.enlace_ir_codigo }}" target="blank">Ir al código</a>
+                            <a href="{{ dato.enlace_carrousel }}">¿Cómo lo hice?</a>
+                        </figcaption>
+                    </figure>
+                    <aside class="job-card-info">
+                        {{ dato.descripcion | safe }}
+                    </aside>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+ {% for dato in datos %}
+    {% for slide in dato.carrousel.all %}
+    <article id="{{ slide.id_carrousel }}" class="modal">
+    
+                    <div class="carrousel_main">
+                        <div class="container">
+                            
+                            <article class="carousel_dos" style="--carousel-bg-color: black;">
+                                <a href="#close" class="modal-close-dos">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/></svg>
+                                </a>
+                                <input type="radio" name="slides" id="slide-1-dos" checked>
+                                <input type="radio" name="slides" id="slide-2-dos">
+                                <input type="radio" name="slides" id="slide-3-dos">
+                                <input type="radio" name="slides" id="slide-4-dos">
+                                <input type="radio" name="slides" id="slide-5-dos">
+    
+                                {{ slide.slide | safe }}
+    
+                                <aside class="slides-nav-dos">
+                                    <label for="slide-1-dos" id="dot-1-dos"></label>
+                                    <label for="slide-2-dos" id="dot-2-dos"></label>
+                                    <label for="slide-3-dos" id="dot-3-dos"></label>
+                                    <label for="slide-4-dos" id="dot-4-dos"></label>
+                                    <label for="slide-5-dos" id="dot-5-dos"></label>
+                                </aside>
+                           </article>
+                        </div>
+                    </div>
+                
+            
+        
+    </article>  
+    {% endfor %}
+{% endfor %}
+    
